@@ -1,0 +1,409 @@
+{
+  "core_version": "1.0.0",
+  "results": {
+    "1011 (1 OF 2) - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 5649,
+      "primitives_by_type": {
+        "closed_loop": 447,
+        "line": 4416,
+        "polyline": 786
+      },
+      "text_items": 963,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "1011 (2 OF 2) - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 5923,
+      "primitives_by_type": {
+        "closed_loop": 536,
+        "line": 4847,
+        "polyline": 540
+      },
+      "text_items": 726,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "1012 (1 OF 2) - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 4993,
+      "primitives_by_type": {
+        "closed_loop": 422,
+        "line": 3695,
+        "polyline": 876
+      },
+      "text_items": 780,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "1012 (2 OF 2) - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 2707,
+      "primitives_by_type": {
+        "closed_loop": 218,
+        "line": 2348,
+        "polyline": 141
+      },
+      "text_items": 338,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "1013 (1 OF 2) - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 5562,
+      "primitives_by_type": {
+        "closed_loop": 445,
+        "line": 4403,
+        "polyline": 714
+      },
+      "text_items": 982,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "1013 (2 OF 2) - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 5938,
+      "primitives_by_type": {
+        "closed_loop": 536,
+        "line": 4877,
+        "polyline": 525
+      },
+      "text_items": 722,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "1014 (1 OF 2) - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 5089,
+      "primitives_by_type": {
+        "closed_loop": 426,
+        "line": 3727,
+        "polyline": 936
+      },
+      "text_items": 785,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "1014 (2 OF 2) - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 2666,
+      "primitives_by_type": {
+        "closed_loop": 220,
+        "line": 2289,
+        "polyline": 157
+      },
+      "text_items": 333,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "1015 - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 2155,
+      "primitives_by_type": {
+        "closed_loop": 159,
+        "line": 1795,
+        "polyline": 201
+      },
+      "text_items": 363,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "1016 - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 2644,
+      "primitives_by_type": {
+        "closed_loop": 182,
+        "line": 2218,
+        "polyline": 244
+      },
+      "text_items": 425,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "1017 - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 2674,
+      "primitives_by_type": {
+        "closed_loop": 188,
+        "line": 2240,
+        "polyline": 246
+      },
+      "text_items": 431,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "1018 - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 2123,
+      "primitives_by_type": {
+        "closed_loop": 151,
+        "line": 1772,
+        "polyline": 200
+      },
+      "text_items": 356,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "1019 - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 178,
+      "primitives_by_type": {
+        "closed_loop": 16,
+        "line": 155,
+        "polyline": 7
+      },
+      "text_items": 97,
+      "layer_count": 0,
+      "bounds_mm": [
+        -4.4,
+        -4.4,
+        430.4,
+        283.0
+      ]
+    },
+    "1020 - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 178,
+      "primitives_by_type": {
+        "closed_loop": 16,
+        "line": 155,
+        "polyline": 7
+      },
+      "text_items": 99,
+      "layer_count": 0,
+      "bounds_mm": [
+        -4.4,
+        -4.4,
+        430.4,
+        283.0
+      ]
+    },
+    "1021 - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 178,
+      "primitives_by_type": {
+        "closed_loop": 16,
+        "line": 155,
+        "polyline": 7
+      },
+      "text_items": 99,
+      "layer_count": 0,
+      "bounds_mm": [
+        -4.4,
+        -4.4,
+        430.4,
+        283.0
+      ]
+    },
+    "1058 - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 2673,
+      "primitives_by_type": {
+        "closed_loop": 294,
+        "line": 2247,
+        "polyline": 132
+      },
+      "text_items": 548,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "1071 - Rev 0.pdf": {
+      "pages": 1,
+      "primitives_total": 5930,
+      "primitives_by_type": {
+        "closed_loop": 427,
+        "line": 5231,
+        "polyline": 272
+      },
+      "text_items": 685,
+      "layer_count": 0,
+      "bounds_mm": [
+        -5.8,
+        -5.7,
+        916.3,
+        620.5
+      ]
+    },
+    "Alvord TX \u2014 Garden Map \u00b7 Final.pdf": {
+      "pages": 1,
+      "primitives_total": 6890,
+      "primitives_by_type": {
+        "closed_loop": 1426,
+        "polyline": 5464
+      },
+      "text_items": 2673,
+      "layer_count": 0,
+      "bounds_mm": [
+        71.6,
+        225.6,
+        487.7,
+        861.5
+      ]
+    },
+    "Alvord TX \u2014 Garden Plan \u00b7 Final.pdf": {
+      "pages": 7,
+      "primitives_total": 9475,
+      "primitives_by_type": {
+        "closed_loop": 713,
+        "polyline": 8762
+      },
+      "text_items": 2372,
+      "layer_count": 0,
+      "bounds_mm": [
+        -11.6,
+        -5.9,
+        285.1,
+        227.5
+      ]
+    },
+    "alvord_garden_map_PRINT.pdf": {
+      "pages": 4,
+      "primitives_total": 1181,
+      "primitives_by_type": {
+        "closed_loop": 1118,
+        "line": 63
+      },
+      "text_items": 2008,
+      "layer_count": 0,
+      "bounds_mm": [
+        0.6,
+        45.7,
+        431.2,
+        280.1
+      ]
+    },
+    "alvord_plant_list.pdf": {
+      "pages": 2,
+      "primitives_total": 123,
+      "primitives_by_type": {
+        "closed_loop": 87,
+        "line": 36
+      },
+      "text_items": 210,
+      "layer_count": 0,
+      "bounds_mm": [
+        10.0,
+        6.7,
+        205.9,
+        278.0
+      ]
+    },
+    "SCOMBINED.pdf": {
+      "pages": 15,
+      "primitives_total": 48657,
+      "primitives_by_type": {
+        "closed_loop": 3978,
+        "line": 39092,
+        "polyline": 5587
+      },
+      "text_items": 7499,
+      "layer_count": 0,
+      "bounds_mm": [
+        -13.9,
+        -13.9,
+        916.4,
+        620.6
+      ]
+    },
+    "Welding-Symbol-Chart OCR.pdf": {
+      "pages": 1,
+      "primitives_total": 644,
+      "primitives_by_type": {
+        "closed_loop": 12,
+        "line": 282,
+        "polyline": 350
+      },
+      "text_items": 365,
+      "layer_count": 0,
+      "bounds_mm": [
+        -23.8,
+        20.9,
+        431.9,
+        324.2
+      ]
+    },
+    "Welding-Symbol-Chart.pdf": {
+      "pages": 1,
+      "primitives_total": 639,
+      "primitives_by_type": {
+        "closed_loop": 13,
+        "line": 282,
+        "polyline": 344
+      },
+      "text_items": 369,
+      "layer_count": 0,
+      "bounds_mm": [
+        -8.8,
+        -8.8,
+        446.9,
+        294.5
+      ]
+    }
+  }
+}
