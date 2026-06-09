@@ -5,9 +5,11 @@
       "pages": 1,
       "primitives_total": 5649,
       "primitives_by_type": {
+        "arc": 99,
+        "circle": 18,
         "closed_loop": 447,
         "line": 4416,
-        "polyline": 786
+        "polyline": 669
       },
       "text_items": 963,
       "layer_count": 0,
@@ -22,9 +24,11 @@
       "pages": 1,
       "primitives_total": 5923,
       "primitives_by_type": {
+        "arc": 30,
+        "circle": 34,
         "closed_loop": 536,
         "line": 4847,
-        "polyline": 540
+        "polyline": 476
       },
       "text_items": 726,
       "layer_count": 0,
@@ -39,9 +43,11 @@
       "pages": 1,
       "primitives_total": 4993,
       "primitives_by_type": {
+        "arc": 148,
+        "circle": 37,
         "closed_loop": 422,
         "line": 3695,
-        "polyline": 876
+        "polyline": 691
       },
       "text_items": 780,
       "layer_count": 0,
@@ -56,9 +62,11 @@
       "pages": 1,
       "primitives_total": 2707,
       "primitives_by_type": {
+        "arc": 2,
+        "circle": 3,
         "closed_loop": 218,
         "line": 2348,
-        "polyline": 141
+        "polyline": 136
       },
       "text_items": 338,
       "layer_count": 0,
@@ -73,9 +81,11 @@
       "pages": 1,
       "primitives_total": 5562,
       "primitives_by_type": {
+        "arc": 63,
+        "circle": 18,
         "closed_loop": 445,
         "line": 4403,
-        "polyline": 714
+        "polyline": 633
       },
       "text_items": 982,
       "layer_count": 0,
@@ -90,9 +100,11 @@
       "pages": 1,
       "primitives_total": 5938,
       "primitives_by_type": {
+        "arc": 36,
+        "circle": 42,
         "closed_loop": 536,
         "line": 4877,
-        "polyline": 525
+        "polyline": 447
       },
       "text_items": 722,
       "layer_count": 0,
@@ -107,9 +119,11 @@
       "pages": 1,
       "primitives_total": 5089,
       "primitives_by_type": {
+        "arc": 249,
+        "circle": 40,
         "closed_loop": 426,
         "line": 3727,
-        "polyline": 936
+        "polyline": 647
       },
       "text_items": 785,
       "layer_count": 0,
@@ -124,9 +138,11 @@
       "pages": 1,
       "primitives_total": 2666,
       "primitives_by_type": {
+        "arc": 1,
+        "circle": 4,
         "closed_loop": 220,
         "line": 2289,
-        "polyline": 157
+        "polyline": 152
       },
       "text_items": 333,
       "layer_count": 0,
@@ -141,9 +157,11 @@
       "pages": 1,
       "primitives_total": 2155,
       "primitives_by_type": {
+        "arc": 2,
+        "circle": 22,
         "closed_loop": 159,
         "line": 1795,
-        "polyline": 201
+        "polyline": 177
       },
       "text_items": 363,
       "layer_count": 0,
@@ -158,9 +176,11 @@
       "pages": 1,
       "primitives_total": 2644,
       "primitives_by_type": {
+        "arc": 4,
+        "circle": 22,
         "closed_loop": 182,
         "line": 2218,
-        "polyline": 244
+        "polyline": 218
       },
       "text_items": 425,
       "layer_count": 0,
@@ -175,9 +195,11 @@
       "pages": 1,
       "primitives_total": 2674,
       "primitives_by_type": {
+        "arc": 5,
+        "circle": 22,
         "closed_loop": 188,
         "line": 2240,
-        "polyline": 246
+        "polyline": 219
       },
       "text_items": 431,
       "layer_count": 0,
@@ -192,9 +214,11 @@
       "pages": 1,
       "primitives_total": 2123,
       "primitives_by_type": {
+        "arc": 5,
+        "circle": 22,
         "closed_loop": 151,
         "line": 1772,
-        "polyline": 200
+        "polyline": 173
       },
       "text_items": 356,
       "layer_count": 0,
@@ -209,9 +233,10 @@
       "pages": 1,
       "primitives_total": 178,
       "primitives_by_type": {
+        "circle": 4,
         "closed_loop": 16,
         "line": 155,
-        "polyline": 7
+        "polyline": 3
       },
       "text_items": 97,
       "layer_count": 0,
@@ -226,9 +251,10 @@
       "pages": 1,
       "primitives_total": 178,
       "primitives_by_type": {
+        "circle": 4,
         "closed_loop": 16,
         "line": 155,
-        "polyline": 7
+        "polyline": 3
       },
       "text_items": 99,
       "layer_count": 0,
@@ -243,9 +269,10 @@
       "pages": 1,
       "primitives_total": 178,
       "primitives_by_type": {
+        "circle": 4,
         "closed_loop": 16,
         "line": 155,
-        "polyline": 7
+        "polyline": 3
       },
       "text_items": 99,
       "layer_count": 0,
@@ -260,9 +287,11 @@
       "pages": 1,
       "primitives_total": 2673,
       "primitives_by_type": {
+        "arc": 10,
+        "circle": 17,
         "closed_loop": 294,
         "line": 2247,
-        "polyline": 132
+        "polyline": 105
       },
       "text_items": 548,
       "layer_count": 0,
@@ -277,9 +306,11 @@
       "pages": 1,
       "primitives_total": 5930,
       "primitives_by_type": {
+        "arc": 30,
+        "circle": 2,
         "closed_loop": 427,
         "line": 5231,
-        "polyline": 272
+        "polyline": 240
       },
       "text_items": 685,
       "layer_count": 0,
@@ -294,8 +325,9 @@
       "pages": 1,
       "primitives_total": 6890,
       "primitives_by_type": {
+        "circle": 348,
         "closed_loop": 1426,
-        "polyline": 5464
+        "polyline": 5116
       },
       "text_items": 2673,
       "layer_count": 0,
@@ -310,8 +342,9 @@
       "pages": 7,
       "primitives_total": 9475,
       "primitives_by_type": {
+        "circle": 221,
         "closed_loop": 713,
-        "polyline": 8762
+        "polyline": 8541
       },
       "text_items": 2372,
       "layer_count": 0,
@@ -358,9 +391,11 @@
       "pages": 15,
       "primitives_total": 48657,
       "primitives_by_type": {
+        "arc": 644,
+        "circle": 296,
         "closed_loop": 3978,
         "line": 39092,
-        "polyline": 5587
+        "polyline": 4647
       },
       "text_items": 7499,
       "layer_count": 0,
@@ -375,9 +410,11 @@
       "pages": 1,
       "primitives_total": 644,
       "primitives_by_type": {
+        "arc": 32,
+        "circle": 5,
         "closed_loop": 12,
         "line": 282,
-        "polyline": 350
+        "polyline": 313
       },
       "text_items": 365,
       "layer_count": 0,
@@ -392,9 +429,11 @@
       "pages": 1,
       "primitives_total": 639,
       "primitives_by_type": {
+        "arc": 32,
+        "circle": 5,
         "closed_loop": 13,
         "line": 282,
-        "polyline": 344
+        "polyline": 307
       },
       "text_items": 369,
       "layer_count": 0,
