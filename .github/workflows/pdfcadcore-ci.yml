@@ -1,0 +1,55 @@
+name: pdfcadcore-ci
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: pdfcadcore-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Compile all Python modules
+        run: |
+          python -m compileall pdfcadcore
+          python -m compileall tools/regression_guard.py
+
+      - name: Install ruff
+        run: pip install ruff
+
+      - name: Lint (functional + bugbear)
+        run: ruff check --select F,B pdfcadcore/ tools/
+
+      - name: Install dependencies
+        run: pip install "PyMuPDF>=1.24,<2.0" pytest
+
+      - name: Run unit tests
+        run: python -m pytest tests/ -v
+
+      # The Tier-1 regression guard (tools/regression_guard.py) compares
+      # extraction output against tools/golden_baselines.json using the
+      # real PDF corpus, which lives only on the local working set
+      # (BCS_CORPUS_ROOT). It cannot run on hosted runners; run it locally
+      # before pushing any extraction change.
+      - name: Verify regression guard imports
+        run: python -c "import importlib.util as u; s=u.spec_from_file_location('rg','tools/regression_guard.py'); m=u.module_from_spec(s); s.loader.exec_module(m); print('regression_guard loads OK')"
+        env:
+          BCS_CORPUS_ROOT: /nonexistent
