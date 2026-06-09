@@ -34,9 +34,24 @@ CORE_ROOT = Path(__file__).resolve().parent.parent
 if str(CORE_ROOT) not in sys.path:
     sys.path.insert(0, str(CORE_ROOT))
 
-DEFAULT_CORPUS = Path(r"C:\1pdf-test-corpus\PDFTest Files")
 BASELINE_PATH = Path(__file__).with_name("golden_baselines.json")
 DEFAULT_MAX_MB = 8.0
+
+
+def _default_corpus() -> Path:
+    """Resolve the corpus dir, honoring the project's BCS_CORPUS_ROOT convention.
+
+    Matches corpus_paths.py in the importers: prefer $BCS_CORPUS_ROOT (then the
+    $PDF_TEST_CORPUS fallback), expecting a 'PDFTest Files' subfolder of PDFs.
+    """
+    import os
+
+    root = os.environ.get("BCS_CORPUS_ROOT") or os.environ.get("PDF_TEST_CORPUS")
+    if root:
+        base = Path(root)
+        sub = base / "PDFTest Files"
+        return sub if sub.is_dir() else base
+    return Path(r"C:\1pdf-test-corpus\PDFTest Files")
 
 
 def _import_core():
@@ -100,7 +115,8 @@ def collect_corpus(corpus: Path, max_mb: float, include_large: bool):
 def main() -> int:
     ap = argparse.ArgumentParser(description="pdfcadcore regression guard")
     ap.add_argument("--capture", action="store_true", help="lock current output as golden baseline")
-    ap.add_argument("--corpus", default=str(DEFAULT_CORPUS), help="directory of test PDFs")
+    ap.add_argument("--corpus", default=None,
+                    help="directory of test PDFs (default: $BCS_CORPUS_ROOT/PDFTest Files)")
     ap.add_argument("--include-large", action="store_true", help="also test PDFs above --max-mb")
     ap.add_argument("--max-mb", type=float, default=DEFAULT_MAX_MB, help="size cap for the default run")
     ap.add_argument("--traceback", action="store_true", help="print full tracebacks on error")
@@ -108,7 +124,7 @@ def main() -> int:
 
     fitz, pdfcadcore, extract_page, compute_import_bounds, reset_ids = _import_core()
 
-    corpus = Path(args.corpus)
+    corpus = Path(args.corpus) if args.corpus else _default_corpus()
     if not corpus.is_dir():
         print(f"FAIL: corpus dir not found: {corpus}")
         return 2
