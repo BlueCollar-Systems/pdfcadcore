@@ -59,7 +59,7 @@ def _import_core():
         import fitz  # PyMuPDF
     except Exception as exc:  # pragma: no cover
         print(f"FAIL: PyMuPDF (fitz) not importable: {exc}")
-        raise SystemExit(2)
+        raise SystemExit(2) from exc
     import pdfcadcore
     from pdfcadcore import extract_page, compute_import_bounds, reset_ids
     return fitz, pdfcadcore, extract_page, compute_import_bounds, reset_ids
