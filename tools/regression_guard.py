@@ -112,9 +112,66 @@ def collect_corpus(corpus: Path, max_mb: float, include_large: bool):
     return out, skipped
 
 
+def _type_totals(results: dict) -> dict:
+    totals: dict[str, int] = {}
+    for fp in results.values():
+        for t, n in fp.get("primitives_by_type", {}).items():
+            totals[t] = totals.get(t, 0) + int(n)
+    return totals
+
+
+def _capture_gate(old: dict, new: dict, args) -> int:
+    """Re-lock review gate (board Q-09-d): never overwrite the golden silently.
+
+    Prints a paste-ready per-type corpus delta plus the biggest per-file movers
+    (intended for the re-baseline commit message). A primitive type dropping to
+    zero corpus-wide aborts without --allow-type-removal — a type going dark is
+    a code path dying, never threshold tuning. Any difference from the existing
+    golden requires --confirm. Returns nonzero to abort, 0 to allow the write.
+    """
+    if old == new:
+        print("\nCapture matches the existing golden baseline exactly (no re-lock needed).")
+        return 0
+    old_t, new_t = _type_totals(old), _type_totals(new)
+    print("\n--- re-lock delta (paste into the re-baseline commit message) ---")
+    for t in sorted(set(old_t) | set(new_t)):
+        a, b = old_t.get(t, 0), new_t.get(t, 0)
+        if a != b:
+            print(f"  {t}: {a} -> {b} ({b - a:+d})")
+    movers = []
+    for name in set(old) | set(new):
+        a = old.get(name, {}).get("primitives_total", 0)
+        b = new.get(name, {}).get("primitives_total", 0)
+        if a != b:
+            movers.append((abs(b - a), name, a, b))
+    for _, name, a, b in sorted(movers, reverse=True)[:3]:
+        print(f"  {name}: {a} -> {b} prims")
+    added = sorted(set(new) - set(old))
+    removed = sorted(set(old) - set(new))
+    if added:
+        print(f"  files added to baseline: {', '.join(added)}")
+    if removed:
+        print(f"  files removed from baseline: {', '.join(removed)}")
+    print("-----------------------------------------------------------------")
+    dead = sorted(t for t, n in old_t.items() if n > 0 and new_t.get(t, 0) == 0)
+    if dead and not args.allow_type_removal:
+        print(f"ABORT: primitive type(s) {dead} drop to ZERO corpus-wide. "
+              "Re-run with --allow-type-removal only if this is truly intentional.")
+        return 1
+    if not args.confirm:
+        print("Refusing to overwrite the golden baseline without --confirm "
+              "(review the delta above first).")
+        return 1
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="pdfcadcore regression guard")
     ap.add_argument("--capture", action="store_true", help="lock current output as golden baseline")
+    ap.add_argument("--confirm", action="store_true",
+                    help="with --capture: approve overwriting an existing, differing baseline")
+    ap.add_argument("--allow-type-removal", action="store_true",
+                    help="with --capture: permit a primitive type to vanish corpus-wide")
     ap.add_argument("--corpus", default=None,
                     help="directory of test PDFs (default: $BCS_CORPUS_ROOT/PDFTest Files)")
     ap.add_argument("--include-large", action="store_true", help="also test PDFs above --max-mb")
@@ -156,6 +213,11 @@ def main() -> int:
         if errors:
             print(f"\nRefusing to capture: {len(errors)} file(s) errored (fix first).")
             return 1
+        if BASELINE_PATH.exists():
+            old = json.loads(BASELINE_PATH.read_text(encoding="utf-8")).get("results", {})
+            gate = _capture_gate(old, results, args)
+            if gate:
+                return gate
         payload = {"core_version": pdfcadcore.__version__, "results": results}
         BASELINE_PATH.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
         print(f"\nCaptured golden baseline ({len(results)} PDFs) -> {BASELINE_PATH}")
